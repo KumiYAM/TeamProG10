@@ -1,7 +1,7 @@
 # TeamProG10HWchallenge9
 <h1>🏗️ TeamProG10</h1>
 <h2>Description</h2>
-The application uses node.js / npm 'inquirer' package.
+This application uses node.js / npm 'inquirer' package.
 Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person. 
 
 <h2>Table of Contents</h2>
@@ -25,7 +25,7 @@ Language</h3>
 <h2>Usage</h2>
 <h3>1)After pull (or clone) repository simply run command on your command line.<br/> 
 2)You will guided by prompt on command line, so please answer the questions,enter nessesary information and hit enter key. <br/>
-3)This prompts will generate your README.md file.
+3)This prompts will generate your HTML webpage that displays summaries of each person such as name/email/role of team/etc, in CARD style.
 </h3>
 <h2>License</h2>
 
