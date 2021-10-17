@@ -1,23 +1,22 @@
-const { TestWatcher } = require("@jest/core")
-const Employee = require("../lib/Employee")
 
-const Engineer = requir("./engineer")
+const engineer = require("../lib/Engineer")
 
-Test("can creat an instance of employee", ()=>{
-const testEmployee = new Employee();
-expect(typeof(testEmployee)).toBe("object")
+
+test("can creat an instance of engineer", ()=>{
+const testEngineer= new engineer();
+expect(typeof(testEngineer)).toBe("object")
 })
 
-test("can set name of employee", ()=>{
-    const testEmployee = new Employee(lalala)
-    expect(testEmployee.name).toBe("lalala")
+test("can set name of engineer", ()=>{
+    const testEmployee = new engineer(momo)
+    expect(testEngineer.name).toBe("momo")
 })
 
 test("getName function return name" , ()=>{
-    const testEmploy = new Employee("name")
-    expect(testEmployee.getName()).toBe("name")
+    const testEngineer = new engineer("name")
+    expect(testEngineer.getName()).toBe("name")
 })
 
-//test("can set salary of artist", ()=>{
-    //const testEmployee = new Employee()
-//})
+test("can set id of engineer", ()=>{
+    const testEngineer = new engineer()
+})

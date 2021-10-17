@@ -1,23 +1,28 @@
 
-const Employee = require("./lib/Employee")
+const Employee = require("../lib/Employee")
 
-const Engineer = requir("/Employee")
 
-Test("can creat an instance of employee", ()=>{
-const testEmployee = new Employee();
-expect(typeof(testEmployee)).toBe("object")
+
+test("can create an instance of  employee" , () => {
+    const employee = new Employee({name: 'Kiko', id: '1234', email: 'kiko@email', role: 'engineer'});
+    expect(employee.getName()).toBe('Kiko');
+});
+test("can set id of employee" , () => {
+    const employee = new Employee('1234')
+    expect(employee.getId()).toBE('1234')
 })
 
-test("can set name of employee", ()=>{
-    const testEmployee = new Employee(lalala)
-    expect(testEmployee.name).toBe("lalala")
+test("can set email of employee", () => {
+    const employee = new Employee('koki@email')
+    expect(employee.getEmail()).toBe('kiko@email')
 })
 
-test("getName function return name" , ()=>{
-    const testEmploy = new Employee("name")
-    expect(testEmployee.getName()).toBe("name")
+
+test("can creat an role of employee", () => {
+const employee = new Employee('aname');
+expect(typeof(employee)).getRole.toBe('aname')
 })
 
-//test("can set salary of artist", ()=>{
-    //const testEmployee = new Employee()
-//})
+
+
+
