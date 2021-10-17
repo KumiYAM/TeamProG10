@@ -1,6 +1,6 @@
 # TeamProG10HWchallenge9
 🏗️ TeamProG10
-<Description>
+<h2>Description/<h2>
 The application uses node.js / npm 'inquire' package.
 Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person. 
 
