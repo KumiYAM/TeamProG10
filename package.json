@@ -7,11 +7,14 @@
     "lib": "lib"
   },
   "dependencies": {
-    "inquirer": "^8.2.0"
+    "expess": "0.0.1-security",
+    "inquire": "^0.4.8",
+    "inquirer": "^8.2.0",
+    "jest": "^27.2.5"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
