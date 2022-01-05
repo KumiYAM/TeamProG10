@@ -77,24 +77,25 @@ inruire
     .then((res) => {
         console.log(res)
 
-       
-            const managerCard = (managerArr)=> {
-                return `<p>${manager.getName()}</p>`
-            }
-        
-      const string = `#Team`<!DOCTYPE_html>
-     <html lang="en">
-        <head></head>
-        <body> ${res.manager}
 
-            ${res.engineer}
+        const managerCard = (managerArr) => {
+            return `<p>${manager.getName()}</p>`
+        }
 
-            ${res.intern}
+        const string = `#Team` <!DOCTYPE_html>
+            <html lang="en">
+                <head></head>
+                <body> ${res.manager}
 
-            ${res.employee}
+                    ${res.engineer}
 
-        </body>
-        </html>
+                    ${res.intern}
+
+                    ${res.employee}
+
+                </body>
+            </html>
+
         fs.writeFile(string, (error) => {
             if (error) throw console.error
             else console.log('success')
