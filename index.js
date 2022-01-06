@@ -1,50 +1,27 @@
-const inquirer = require('inquirer');
-const Manager = require('./lib/Manager.js');
-const Intern = require('./lib/Intern.js');
-const Engineer = require('./lib/Engineer.js');
-const Employee = require('./lib/Employee.js');
 const fs = require('fs');
+const inquirer = require('inquirer');
+const manager = require('./lib/Manager');
+const intern = require('./lib/Intern');
+const engineer = require('./lib/Engineer');
+const employee = require('./lib/Employee');
+
+//const generatePage = (manager, intern, employee, engineer) => 
+//`Manager: ${manager}, Intern: ${intern}, Employee: ${employee}, Engineer: ${engineer}`;
+
 
 
 inquirer
     .prompt([
         {
-            type: 'list',
-            name: 'employeeRole',
-            message: 'What is employee role do you want to create?',
-            choices: [
-                "Manager",
-                "Engineer",
-                "Intern",
-                "Exit",
-            ]
-        }
-
-    ])
-    .then((res) => {
-        console.log(res.employeeRole)
-        switch (res.employeeRole) {
-            case "Intern":
-                createIntern()
-                break;
-            case "Engineer":
-                createEngineer()
-                break;
-            case "Manager":
-                createManager()
-                break;
-            case "Exit":
-                createHtml()
-                break;
-        };
-    });
-
-inruire
-    .prompt([
+            type: 'input',
+            name: 'name',
+            message: 'Enter name of employee.',
+        },
         {
-            type: "input",
-            name: "name",
-            message: "Name",
+            type: 'checkbox',
+            name: 'role',
+            message: 'Which employee role do you want to create?',
+            choices: ['Manager', 'Engineer', 'Intern', 'Exit']
         },
         {
             type: "input",
@@ -63,43 +40,64 @@ inruire
         },
         {
             type: "input",
-            name: "scholl",
-            message: "which school is this intern from?",
+            name: "school",
+            message: "Which school is this intern from?",
         },
         {
             type: "input",
             name: "github",
             message: "Enter github info",
         },
-
-
     ])
-    .then((res) => {
-        console.log(res)
+    .then((answer) => {
+        console.log(answer)
 
 
-        const managerCard = (managerArr) => {
-            return `<p>${manager.getName()}</p>`
-        }
-
-        const string = `#Team` <!DOCTYPE_html>
+        const string = `#Team < !DOCTYPE_html >
             <html lang="en">
                 <head></head>
-                <body> ${res.manager}
+                <body> 
+                    ${manager}
 
-                    ${res.engineer}
+                    ${engineer}
 
-                    ${res.intern}
+                    ${intern}
 
-                    ${res.employee}
-
+                    ${employee}
                 </body>
-            </html>
+            </html>`
 
-        fs.writeFile(string, (error) => {
+        //fs.writeFile(string, (error) => {
+            fs.writeFile('./dist/index.html', error => {   
             if (error) throw console.error
-            else console.log('success')
+            else console.log('success! Checkout index.html!')
         });
     })
+/*
+console.log(res.employeeRole)
+switch (res.employeeRole) {
+    case "Intern":
+        createIntern();
+        break;
+    case "Engineer":
+        createEngineer();
+        break;
+    case "Manager":
+        createManager();
+        break;
+    case "Exit":
+        createHtml();
+        break;
+};
+*/
 
 
+/*
+promptUser()
+    //.then(promptProject)
+    //.then(projectAnswers => console.log(projectAnswers));
+    .then(answers => console.log(answers));
+//.then(portfolioData => {
+//console.log(portfolioData);
+  //});
+*/
