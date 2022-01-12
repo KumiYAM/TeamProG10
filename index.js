@@ -7,10 +7,10 @@ const fs = require('fs');
 
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
-//const Engineer = require('./lib/Engineer');
+const Engineer = require('./lib/Engineer');
 const Employee = require('./lib/Employee');
 
-//const employeeArray = [];
+const employeeArray = [];
 
 inquirer
 .prompt([     
@@ -62,7 +62,7 @@ inquirer
 
     .then((answer) => {
         console.log(answer)
-    })
+    });
     //.then(portfolioData => {
        //const pageHTML = generatePage(portfolioData);
     
@@ -94,11 +94,19 @@ inquirer
 
 
 
-//promptUser()
-    //.then(promptProject)
-    //.then(projectAnswers => console.log(projectAnswers));
-    //.then(answers => console.log(answers));
-//.then(portfolioData => {
-//console.log(portfolioData);
-  //});
+//function init() {
+// promptUser()
+//     .then(questions => {
+//         return generateMarkdown(employeeArray);
+//     })
+//     .then(writePage => {
+//             return writeFile(writePage);
+//     })
+//     .then(answer => {
+
+//     console.log(answer);
+//     return copyFile();
+// })
+// }
+// init();
 
