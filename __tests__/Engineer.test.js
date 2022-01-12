@@ -8,7 +8,7 @@ expect(typeof(testEngineer)).toBe("object")
 })
 
 test("can set name of engineer", ()=>{
-    const testEmployee = new engineer(momo)
+    const testEngineer = new engineer(momo)
     expect(testEngineer.name).toBe("momo")
 })
 
