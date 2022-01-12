@@ -8,3 +8,7 @@ test("get engineer github name", () => {
     //expect(engineer.githubName).toEqual('janehub');
 });
 
+test("get engineer role", () => {
+    const engineer = new Engineer('Jane', 'email', '12' );
+    //expect(engineer.getRole()).toEqual(expect.any(String));
+});
