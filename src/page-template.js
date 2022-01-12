@@ -1,16 +1,19 @@
-module.exports = (manager, engineer, intern, employee) => {
+module.exports = templateData => {
+  console.log(templateData);
+
     return `
     <!DOCTYPE html>
     <html lang="en">
    <head>
-     <title>Team</title>
-    </head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>TeamProG10 Team</title>
+   </head>
    <body> 
-    <div>${res.manager}</div>
-    <div>${res.engineer}</div>
-    <div>${res.intern}</div>
-    <div>${res.employee}</div>
-    </body>
+    <h1>${templateData.name}</h1>
+    <h2><a href="https://github.com/${templateData.github}">Github</a></h2>
+   </body>
     </html>   
      `;
 };
