@@ -1,7 +1,37 @@
- module.exports = templateData => {
-   console.log(templateData);
+function createManagerCard(manager) {
+  return `
+  <h2>manager</h2>
+<p>name: ${manager.name}</p>
+<p>id: ${manager.id}</p>
+<p>email: ${manager.email}</p>
+<p>officeNumber: ${manager.officeNumber}</p>
+  `;
+}
 
-     return `
+function createInternCard(intern) {
+  return `
+  <h2>intern</h2>
+<p>name: ${intern.name}</p>
+<p>id: ${intern.id}</p>
+<p>email: ${intern.email}</p>
+<p>school: ${intern.school}</p>
+  `;
+}
+
+function createEngineerCard(engineer) {
+  return `
+  <h2>engineer</h2>
+<p>name: ${engineer.name}</p>
+<p>id: ${engineer.id}</p>
+<p>email: ${engineer.email}</p>
+<p>github: ${engineer.school}</p>
+  `;
+}
+
+function createHTMLDocument(templateData) {
+  console.log(templateData);
+
+  return `
      <!DOCTYPE html>
      <html lang="en">
     <head>
@@ -26,4 +56,8 @@
        </header>
     </body>/   </html>   
       `;
- };
+}
+function createHTML(employeeArray) {
+  console.log(employeeArray);
+}
+module.exports = createHTML;
