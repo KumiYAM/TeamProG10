@@ -1,8 +1,8 @@
+const fs = require("fs");
 const inquirer = require("inquirer");
 //const { writeFile, copyFile } = require('./dist/index.html');
-//const generatePage = require('./src/page-template.js');
-//const renderHtml = require('./src/generateMarkdown');
-const fs = require("fs");
+//const generatePage = require("./src/page-template.js");
+//const renderHtml = require("./src/generateMarkdown");
 
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
@@ -10,8 +10,13 @@ const Engineer = require("./lib/Engineer");
 const Employee = require("./lib/Employee");
 const createHTML = require("./src/page-template");
 
-const employeeArray = [];
+// const manager = new Manager("Jane", 1, "qq@qqq.com", 123456);
+// const engineer = new Engineer("Dave", 2, "ee@eee.com", "davehub");
+// const intern = new Intern("Sam", 3, "ww@www.com", "UT");
 
+// const employeeArray = [manager, engineer, intern];
+
+const employeeArray = [];
 /*
  collect manager information
  add object to employee array
@@ -179,12 +184,21 @@ function mainMenu() {
           addEngineer();
           break;
         case "Exit":
-          createHTML(employeeArray);
+          const document = createHTML(employeeArray);
+
+          fs.writeFile("./dist/index.html", document, (error) => {
+            if (error) throw new Error(err);
+
+            console.log("success! Checkout index.html!");
+          });
           break;
       }
     });
 }
-addManager();
+
+//addManager();
+
+mainMenu();
 // inquirer
 //   .prompt([
 //     {
