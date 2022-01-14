@@ -196,9 +196,10 @@ function mainMenu() {
     });
 }
 
-//addManager();
+addManager();
 
-mainMenu();
+//mainMenu();
+
 // inquirer
 //   .prompt([
 //     {
