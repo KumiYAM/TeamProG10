@@ -1,13 +1,15 @@
 //const { expect, test } = require('@jest/globals');
-const Engineer = require("../lib/Engnerr");
+const Engineer = require("../lib/Engineer");
 
 test("get engineer github name", () => {
-  const engineer = new Engineer("ccc", "2", "ccc@cc.com", "cgub");
+  const testValue = "github";
+  const engineer = new Engineer("Sam", 2, "ccc@cc.com", testValue);
 
-  expect(engineer.github).toEqual("cgub");
+  expect(engineer.github).toBe(testValue);
 });
 
-test("get engineer school", () => {
-  const engineer = new Engineer("ccc", "2", "ccc@cc.com", "cgub");
-  expect(engineer.getSchool()).toEqual(expect.any(String));
+test("get engineer ", () => {
+  const testValue = "Engineer";
+  const engineer = new Engineer("ccc", "2", "ccc@cc.com");
+  expect(engineer.getRole()).toBe(testValue);
 });

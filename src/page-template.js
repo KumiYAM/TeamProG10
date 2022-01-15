@@ -24,7 +24,7 @@ function createEngineerCard(engineer) {
 <p>name: ${engineer.name}</p>
 <p>id: ${engineer.id}</p>
 <p>email: ${engineer.email}</p>
-<p>github: ${engineer.school}</p>
+<p >github: ${engineer.github}</p>
   `;
 }
 
