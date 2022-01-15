@@ -1,37 +1,40 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-    --primary: purple;
-    --secondary: white;
+  --primary: purple;
+  --secondary: white;
 }
 
 body {
-    font-family: ///
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav {
-display: flex;
-
-
+  display: flex;
 }
 
 .container {
-    display: flex;
+  display: flex;
 }
 
-.card {
-background-color: 
-border: .30px solid;
-max-width: 340px;
-min-height: 240px;
-margin: 50px 30px 0 50px;
+.row {
+  background-color: snow;
+  border: 0.3px solid;
+  max-width: 340px;
+  min-height: 240px;
+  margin: 50px 30px 0 50px;
 }
 
-.card-head {
+.head-manager {
+  background-color: cadetblue;
 }
-.card-body {    
+
+.head-engineer {
+  background-color: slategray;
 }
-.card-body li {    
+
+.head-intern {
+  background-color: tomato;
 }

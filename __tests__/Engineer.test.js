@@ -1,14 +1,13 @@
 //const { expect, test } = require('@jest/globals');
-const Engineer = require("../lib/Employee")
-
+const Engineer = require("../lib/Engnerr");
 
 test("get engineer github name", () => {
-    const engineer = new Engineer('Jane', 1, 'email', 'janehub');
+  const engineer = new Engineer("ccc", "2", "ccc@cc.com", "cgub");
 
-    //expect(engineer.githubName).toEqual('janehub');
+  expect(engineer.github).toEqual("cgub");
 });
 
-test("get engineer role", () => {
-    const engineer = new Engineer('Jane', 'email', '12' );
-    //expect(engineer.getRole()).toEqual(expect.any(String));
+test("get engineer school", () => {
+  const engineer = new Engineer("ccc", "2", "ccc@cc.com", "cgub");
+  expect(engineer.getSchool()).toEqual(expect.any(String));
 });

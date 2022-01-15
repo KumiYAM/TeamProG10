@@ -1,6 +1,6 @@
 function createManagerCard(manager) {
   return `
-  <h2>manager</h2>
+  <h2 class="head-manager">Manager</h2>
 <p>name: ${manager.name}</p>
 <p>id: ${manager.id}</p>
 <p>email: ${manager.email}</p>
@@ -10,7 +10,7 @@ function createManagerCard(manager) {
 
 function createInternCard(intern) {
   return `
-  <h2>intern</h2>
+  <h2 class="head-intern">Intern</h2>
 <p>name: ${intern.name}</p>
 <p>id: ${intern.id}</p>
 <p>email: ${intern.email}</p>
@@ -20,7 +20,7 @@ function createInternCard(intern) {
 
 function createEngineerCard(engineer) {
   return `
-  <h2>engineer</h2>
+  <h2  class="head-engineer">Engineer</h2>
 <p>name: ${engineer.name}</p>
 <p>id: ${engineer.id}</p>
 <p>email: ${engineer.email}</p>
